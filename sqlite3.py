@@ -13,12 +13,9 @@ import sqlite3
   
 conn = sqlite3.connect('books.db')
 curs = conn.cursor()
-curs.books('''CREATE TABLE books (id INTEGER PRIMARY KEY, title TEXT, author TEXT, year INTEGER)''')
-#<sqlite3.Cursor object at 0x1006a22d0> #message to imply anobject has been created
-
-('SELECT title FROM books ORDER BY title;')
+curs.books('SELECT title FROM books ORDER BY title;')
 
 conn =sqlite3.connect('books.db')
-curs.books ('SELECT title FROM books ORDER BY title;')
+curs.books 
 curs.fetchall()
 
